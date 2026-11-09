@@ -1,1 +1,45 @@
-PLACEHOLDER_WILL_REPLACE
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Candidato 360 + Código Imagen · Caquetá</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:system-ui,sans-serif;background:#111;color:#fff;overflow:hidden;height:100vh}.slide{display:none;width:100vw;height:100vh;position:absolute;top:0;left:0;padding:48px 60px;flex-direction:column}.slide.active{display:flex}.slide.dark{background:#0D1B2A}.slide.light{background:#F7F6F3;color:#1A1A1A}.gold{color:#C9A84C}.eyebrow{font-size:13px;letter-spacing:2.5px;text-transform:uppercase;color:#C9A84C;margin-bottom:12px;font-weight:600}h1{font-size:48px;line-height:1.1;font-weight:700}h2{font-size:32px;line-height:1.2;font-weight:700;margin-bottom:16px}.line{width:60px;height:3px;background:#C9A84C;margin:16px 0}.footer-bar{position:absolute;bottom:20px;left:60px;right:60px;display:flex;justify-content:space-between;align-items:center;font-size:12px}.logo-mark{display:flex;align-items:center;gap:8px}.nav{position:fixed;bottom:24px;right:24px;display:flex;gap:8px;z-index:100}.nav button{background:#C9A84C;color:#0D1B2A;border:none;padding:8px 14px;border-radius:6px;cursor:pointer;font-weight:700}.counter{position:fixed;bottom:28px;left:24px;font-size:13px;color:#888;z-index:100}
+</style>
+</head>
+<body>
+<div class="slide dark active" id="s1">
+  <div style="text-align:center;margin-top:60px;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;">
+    <div style="display:flex;align-items:center;gap:16px;margin-bottom:20px;">
+      <img src="https://raw.githubusercontent.com/principe666/candidato360-caqueta-gobernacion/main/ricardo-logo.png" alt="Ricardo Ruiz" style="height:42px;width:auto;">
+      <div style="font-size:18px;font-weight:700;letter-spacing:2px;" class="gold">CANDIDATO 360</div>
+    </div>
+    <h1>CANDIDATO 360<br>+ CÓDIGO IMAGEN<br><span class="gold">CAQUETÁ</span></h1>
+    <div class="line" style="margin:28px auto;"></div>
+    <p class="gold" style="font-size:18px;">Paquete Integral para Candidatura a Gobernación 2027</p>
+    <p style="margin-top:8px;font-size:16px;color:#A8DBC9;">Luis Manuel Espinoza</p>
+  </div>
+  <div class="footer-bar">
+    <div class="logo-mark"><img src="https://raw.githubusercontent.com/principe666/candidato360-caqueta-gobernacion/main/ricardo-logo.png" alt="Ricardo Ruiz" style="height:26px;width:auto;"></div>
+    <div class="logo-mark"><img src="https://www.conmaximoimpacto.com/wp-content/uploads/2022/01/logo-fondo-oscuro.svg" alt="Máximo Impacto" style="height:32px;width:auto;"></div>
+    <div style="color:#888;font-size:12px;">Confidencial</div>
+  </div>
+</div>
+<div class="slide light" id="s2">
+  <div class="eyebrow">LA PROMESA</div>
+  <h2>Evidencia + Imagen que conecta en Caquetá</h2>
+  <div class="line"></div>
+  <p style="max-width:700px;font-size:16px;line-height:1.5;">Candidato 360 le da los datos para decidir en todo el departamento. Código Imagen le da la presencia, el mensaje y la conexión emocional para que esos datos se conviertan en votos.</p>
+  <video controls playsinline style="width:300px;border-radius:12px;margin-top:20px;"><source src="https://raw.githubusercontent.com/principe666/candidato360-bajo-cauca/main/candidato360_demo.mp4" type="video/mp4"></video>
+</div>
+<div class="nav"><button onclick="prev()">←</button><button onclick="next()">→</button></div>
+<div class="counter" id="counter">1 / 2</div>
+<script>
+const slides=document.querySelectorAll('.slide');let current=0;
+function show(n){slides[current].classList.remove('active');current=(n+slides.length)%slides.length;slides[current].classList.add('active');document.getElementById('counter').textContent=(current+1)+' / '+slides.length;}
+function next(){show(current+1);}function prev(){show(current-1);}
+document.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key===' ')next();if(e.key==='ArrowLeft')prev();});
+</script>
+</body>
+</html>
